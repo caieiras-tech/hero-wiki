@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'habilidade',
     'hcategoria',
     'heroi',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

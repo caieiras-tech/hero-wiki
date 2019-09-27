@@ -6,6 +6,7 @@ from hcategoria.models import Categoria
 
 
 class Heroi(models.Model):
+
     nome = models.CharField(max_length=50, verbose_name='Nome')
     idade = models.IntegerField(verbose_name='Idade')
     universo = models.CharField(max_length=50, verbose_name='Universo')
