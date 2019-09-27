@@ -1,14 +1,15 @@
 from rest_framework import serializers
-from habilidade.models import Habilidade
+
+from hcategoria.models import Categoria
 
 
-class HabilidadeSerializer(serializers.Serializer):
+class CategoriaSerializer(serializers.Serializer):
     nome = serializers.CharField(max_length=50)
 
 
     def create(self, validated_data):
-        habilidade = Habilidade.objects.create(**validated_data)
-        return habilidade
+        categoria = Categoria.objects.create(**validated_data)
+        return categoria
 
     def update(self, instance, validated_data):
         instance.nome = validated_data.get('nome')
