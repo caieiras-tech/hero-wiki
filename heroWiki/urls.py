@@ -20,10 +20,12 @@ from rest_framework import routers
 
 from habilidade.views import HabilidadeViewSet
 from hcategoria.views import CategoriaViewSet
+from heroi.views import HeroiViewSet
 
 router = routers.DefaultRouter()
 router.register(r'habilidade', HabilidadeViewSet)
 router.register(r'categoria', CategoriaViewSet)
+router.register(r'heroi', HeroiViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

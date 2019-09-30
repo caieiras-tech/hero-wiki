@@ -27,5 +27,10 @@ class HeroiSerializer(serializers.Serializer):
 
     def update(self, instance, validated_data):
         instance.nome = validated_data.get('nome')
+        instance.idade = validated_data.get('idade')
+        instance.universo = validated_data('universo')
+        categoria_data = validated_data.pop('categoria_heroi')
+        categoria = Categoria.objects.get(id=categoria_data['id'])
+        instance.categoria_heroi = categoria
         instance.save()
         return instance

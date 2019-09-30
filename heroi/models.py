@@ -3,13 +3,19 @@ from django.db import models
 # Create your models here.
 from habilidade.models import Habilidade
 from hcategoria.models import Categoria
+from universo.models import Universo
 
 
 class Heroi(models.Model):
 
     nome = models.CharField(max_length=50, verbose_name='Nome')
     idade = models.IntegerField(verbose_name='Idade')
-    universo = models.CharField(max_length=50, verbose_name='Universo')
+    universo = models.ForeignKey(
+        Universo,
+        on_delete=models.CASCADE,
+        related_name='universo',
+        verbose_name='universo',
+    )
     habilidade_heroi = models.ManyToManyField(
         Habilidade,
         verbose_name='habilidade',
