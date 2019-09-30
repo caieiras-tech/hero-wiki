@@ -21,9 +21,11 @@ from rest_framework import routers
 from habilidade.views import HabilidadeViewSet
 from hcategoria.views import CategoriaViewSet
 from heroi.views import HeroiViewSet
+from universo.views import UniversoViewSet
 
 router = routers.DefaultRouter()
 router.register(r'habilidade', HabilidadeViewSet)
+router.register(r'universo', UniversoViewSet)
 router.register(r'categoria', CategoriaViewSet)
 router.register(r'heroi', HeroiViewSet)
 

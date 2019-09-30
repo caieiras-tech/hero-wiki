@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'habilidade',
     'hcategoria',
     'heroi',
+    'universo',
     'rest_framework',
 ]
 
