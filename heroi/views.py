@@ -15,3 +15,7 @@ class HeroiViewSet(viewsets.ModelViewSet):
     # permission_classes = (IsAuthenticatedOrReadOnly,)
     # authentication_classes = (TokenAuthentication,)
     serializer_class = HeroiSerializer
+
+
+def index(request):
+    return render(request, 'index.html')
