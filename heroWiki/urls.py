@@ -33,5 +33,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('', views.index),
-    path('herois', views.lista)
+    path('herois', views.lista),
+    path('wiki', views.detalhe)
 ]

@@ -1,0 +1,47 @@
+*{
+    margin: 0%;
+}
+body{
+    width:100%;
+}
+nav {
+    background-image: linear-gradient(to bottom, rgb(243, 127, 18), rgb(252, 183, 118));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    /* background-color:#db6d06; */
+    font-family: 'Anton', sans-serif;
+}
+
+nav .logo{
+    margin: 20px;;
+    color: white;
+}
+nav .links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+} 
+
+nav .links a{
+    color: white;
+    text-decoration: none;
+}
+
+section{
+    cursor: pointer;
+}
+
+section .detalhes{
+    display: none;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+section .nome{
+    display: flex;
+
+}

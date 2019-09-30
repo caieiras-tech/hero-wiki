@@ -20,6 +20,14 @@ class HeroiViewSet(viewsets.ModelViewSet):
 def index(request):
     return render(request, 'index.html')
 
+def detalhe(request):
+    herois = Heroi.objects.all()
+
+    contexto = {
+        'herois': herois
+    }
+    return render(request, 'detalhe.html', contexto)
+
 def lista(request):
     herois = Heroi.objects.all()
 
