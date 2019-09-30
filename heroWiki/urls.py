@@ -32,5 +32,6 @@ router.register(r'heroi', HeroiViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('', views.index)
+    path('', views.index),
+    path('herois', views.lista)
 ]
