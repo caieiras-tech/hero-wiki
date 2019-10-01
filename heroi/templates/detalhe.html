@@ -12,36 +12,32 @@
 <body>
         <nav>
             <div class='logo'>
-                <a href="index"><h2>HEROWIKI</p></a>
+                <a href="/index"><h2>HEROWIKI</p></a>
             </div>
             <div class="links">
-                <a href="herois">Herois</a>
-                <a href="wiki">wiki Herois</a>
+                <a href="/herois">Herois</a>
                 <a href="detalhes.html">Universos</a>
             </div>
         </nav>
         <section>
+            <H3>DETALHES DO HEROI</H3>
+          
         <div class="nome">
-            {% if herois %}
-            {%for heroi in herois %}
-            
-            <h2 class="heroi">{{heroi.nome}}</h2>
-            <div class="detalhes">
-               {% if herois %}
-               {%for heroi in herois %}
-           
+            {% if heroi %}
+                <h2>{{heroi.nome}}</h2>
                <p>{{heroi.idade}}</p>
-               <p>{{heroi.habilidade_heroi}}</p>
-               <p>{{heroi.categoria_heroi}}</p>
+               {% for habilidade in habilidades %}
+               <p>{{habilidade.nome}}</p>
                {% endfor %}
-               {% endif %}
-           </div>
-            {% endfor %}
+               <p>{{heroi.categoria_heroi}}</p>
+               
             {% endif %}
-
         </div>
 
     </section>
+    <article>
+
+    </article>
     <footer>
             <p>@todos direitos reservados</p>
         </footer>

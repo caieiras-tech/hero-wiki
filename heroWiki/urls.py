@@ -35,5 +35,6 @@ urlpatterns = [
     path('', views.index),
     path('index', views.index),
     path('herois', views.lista),
-    path('wiki', views.detalhe)
+    path('wiki/<int:id>', views.detalhe)
+    
 ]

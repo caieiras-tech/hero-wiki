@@ -15,11 +15,11 @@
             </div>
             <div class="links">
                 <a href="herois">Herois</a>
-                <a href="wiki">wiki Herois</a>
                 <a href="detalhes.html">Universos</a>
             </div>
         </nav>
         <header>
+              
             <h3>HEROIS</h3>
         </header>
         <section>
@@ -31,13 +31,16 @@
             <div class="detalhes">
                 <p> {{heroi.categoria_heroi}}</p>
                 <p> {{heroi.universo_heroi}}</p>
+                <a href="wiki/{{heroi.id}}"><button>Detalhes</button></a>
             </div>
             {% endfor %}
             {% endif %}                             
-            
         </section>
+        <article>
 
+        </article>
         <footer>
+               
             <p>@todos direitos reservados</p>
         </footer>
        

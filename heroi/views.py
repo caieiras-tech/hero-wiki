@@ -20,13 +20,16 @@ class HeroiViewSet(viewsets.ModelViewSet):
 def index(request):
     return render(request, 'index.html')
 
-def detalhe(request):
-    herois = Heroi.objects.all()
-
+def detalhe(request, id):
+    heroi = Heroi.objects.get(id=id)
+    habilidades = heroi.habilidade_heroi.all()
+    
     contexto = {
-        'herois': herois
+        'heroi': heroi,
+        'habilidades': habilidades
     }
     return render(request, 'detalhe.html', contexto)
+    
 
 def lista(request):
     herois = Heroi.objects.all()

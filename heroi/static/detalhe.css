@@ -33,8 +33,15 @@ nav .links a{
 
 section{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-family: 'Courier New', Courier, monospace;   
-    height: 79vh; 
+    height: 280px;
+}
+section h3{
+    padding-bottom: 20px;
+    font-size: 25pt;
 }
 section .nome{
     cursor: pointer;
@@ -42,6 +49,10 @@ section .nome{
 .detalhes{
     display: none;
   
+}
+article{
+    background-image: url(img/Os-Vingadores-Banner.jpg);
+    height: 250px;
 }
 footer{
     width: 100%;
