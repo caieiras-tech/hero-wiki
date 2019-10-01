@@ -1,6 +1,10 @@
-let div = document.querySelector('.nome');
-let det = document.querySelector('.detalhe');
+let heroi = document.querySelector('.heroi');
+let det = document.querySelector('.detalhes');
 
-div.onclick = ()=>{
+heroi.onmouseover =()=>{
     det.style.display = 'flex';
+}
+
+heroi.onmouseout =()=>{
+    det.style.display = 'none';
 }

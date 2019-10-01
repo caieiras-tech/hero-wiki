@@ -1,5 +1,5 @@
 from rest_framework import serializers
-
+from habilidade.models import Habilidade
 from habilidade.serializers import HabilidadeSerializer
 from hcategoria.models import Categoria
 from heroi.models import Heroi
