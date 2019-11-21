@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'lista.css' %}">
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+            <div class='logo'>
+                <a href="index"><h2>HEROWIKI</p></a>
+            </div>
+            <div class="links">
+                <a href="herois">Herois</a>
+                <a href="detalhes.html">Universos</a>
+            </div>
+        </nav>
+        <header>
+              
+            <h3>HEROIS</h3>
+        </header>
+        <section>
+            {% if herois %}
+            {%for heroi in herois %}
+            <div class="herois">
+                <p>{{heroi.nome}}</p>
+            </div>
+            <div class="detalhes">
+                <p> {{heroi.categoria_heroi}}</p>
+                <p> {{heroi.universo_heroi}}</p>
+                <a href="wiki/{{heroi.id}}"><button>Detalhes</button></a>
+            </div>
+            {% endfor %}
+            {% endif %}                             
+        </section>
+        <article>
+
+        </article>
+        <footer>
+               
+            <p>@todos direitos reservados</p>
+        </footer>
+       
+</body>
+</html>

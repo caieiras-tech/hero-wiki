@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'detalhe.css' %}">
+    <script src="{% static 'script.js' %}" defer></script>
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+            <div class='logo'>
+                <a href="/index"><h2>HEROWIKI</p></a>
+            </div>
+            <div class="links">
+                <a href="/herois">Herois</a>
+                <a href="detalhes.html">Universos</a>
+            </div>
+        </nav>
+        <section>
+            <H3>DETALHES DO HEROI</H3>
+
+        <div class="nome">
+            {% if heroi %}
+                <h2>{{heroi.nome}}</h2>
+               <p>{{heroi.idade}}</p>
+               {% for habilidade in habilidades %}
+               <p>{{habilidade.nome}}</p>
+               {% endfor %}
+               <p>{{heroi.categoria_heroi}}</p>
+               
+            {% endif %}
+        </div>
+
+    </section>
+    <article>
+
+    </article>
+    <footer>
+            <p>@todos direitos reservados</p>
+        </footer>
+</body>
+</html>
